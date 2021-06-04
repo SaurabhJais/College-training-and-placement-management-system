@@ -1,0 +1,75 @@
+<%- include("common/metadata.ejs") %>
+    <%- include("common/header.ejs") %>
+
+        <h1 class="text-center mt-4" style="font-weight: 800;">Student - Signup</h1>
+        <div id="signupForm" class="border border-1 rounded-3 mx-auto my-5" style="width: 450px;">
+            <form onsubmit= "console.log('Hello')" method="POST" action="/">
+                <div class="my-3 px-3">
+                    <label for="firstName" class="form-label">First name:</label>
+                    <input required type="text" name="firstName" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="lastName" class="form-label">Last name:</label>
+                    <input required type="text" name="lastName" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="Email" class="form-label">Email:</label>
+                    <input required type="email" name="email" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="mobile" class="form-label">Mobile:</label>
+                    <input required type="tel" name="mobile" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="personalAddress" class="form-label">Personal Address</label>
+                    <input required type="text" name="personalAddress" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="companyName" class="form-label">Company name:</label>
+                    <input required type="text" name="companyName" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="companyAddress" for="name" class="form-label">Company Address:</label>
+                    <input required type="text" name="companyAddress" class="form-control rounded-0 shadow-none">
+                </div>
+
+                <div class="my-3 px-3">
+                    <label for="name" class="form-label">City:</label>
+                    <input required type="text" name="city" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="state" class="form-label">State:</label>
+                    <input required type="text" name="state" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="pinCode" class="form-label">Pin code:</label>
+                    <input required type="number" name="pinCode" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="password" class="form-label">Enter Password:</label>
+                    <input required type="password" name="password" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="confirmPassword" class="form-label">Confirm password:</label>
+                    <input required type="password" name="confirmPassword" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="m-3">
+                    <input required type="checkbox" name="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"><small>By checking it you will accept
+                            our <a href="#">terms and conditions</small></a></label>
+                </div>
+                <center><button required type="submit" class="btn btn-outline-dark btn-block border-1 rounded-0 my-3 "
+                        style="width: 91%;">Submit</button></center>
+            </form>
+        </div>
+
+
+        <%- include("common/footer.ejs") %>
+            <%- include("common/metadatabottom.ejs") %>
+
+            <script>
+                function studentSignUpSubmit(e){
+                    console.log("Hello");
+                    console.log(e)
+                }
+            </script>

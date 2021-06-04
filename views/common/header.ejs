@@ -1,0 +1,93 @@
+<div id="navbar">
+  <div class="d-flex justify-content-between ">
+
+    <div id="collapsebtn" class="d-lg-none d-block mt-3"
+      style="padding: 7px 13px; font-size: 20px; width: fit-content; height: fit-content; cursor: pointer;">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mx-lg-0 mx-2" style=" width: 200px; margin-top: 3px;">
+      <a href="/"><img style="height: 33px" src="logo.svg" /></a>
+    </div>
+
+    <div class="flex-grow-1" style="height: 50px; width: 300px; margin-left: 50px; margin-top: 23px;">
+      <ul id="nav" class="d-flex list-unstyled justify-content-start" style="font-weight: 900;">
+        <a href="/">
+          <li class="px-4">Home</li>
+        </a>
+        <a href="#">
+          <li class="px-4">About</li>
+        </a>
+        <a href="/contact-us">
+          <li class="px-4">Contact</li>
+        </a>
+        <a href="/login">
+          <li class="px-4">Login</li>
+        </a>
+        <a href="/signup">
+          <li class="px-4">Sign Up</li>
+        </a>
+      </ul>
+    </div>
+
+    <div class="d-lg-block d-none d-flex justify-content-center align-items-center"
+      style="height: 50px; width: 200px; margin-top: 15px;">
+      <button class=" btn btn-outline-dark rounded-0 border-3 px-3 py-2 shadow-none "><b>Get the App</b></button>
+    </div>
+  </div>
+
+
+
+
+  <div id="sidebarwrapper" class="position-fixed"
+    style="top: 0; left: 0; right: 0; bottom: 0; background-color: #6969692e;">
+    <div id="sidebar" class="h-100 bg-white shadow-lg position-fixed top-0" style="left: 0; width: 250px;">
+
+      <div class="mt-4 pb-3 border-bottom border-dark">
+        <img class=" mx-3" src="logo.svg" style="height: 30px;" />
+      </div>
+
+      <ul id="sidebarlist" class="list-unstyled mt-4">
+
+      </ul>
+
+      <button class="btn btn-dark px-5 py-3 shadow-none position-absolute mx-4" style="bottom: 20px;"><b>Get the
+          App</b></button>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<script>
+  let sidebar = document.getElementById("sidebar")
+  let nav = document.querySelector("#nav")
+  let sidebarlist = document.getElementById("sidebarlist")
+  let collapsebtn = document.getElementById("collapsebtn")
+  let sidebarwrapper = document.getElementById("sidebarwrapper")
+
+  if (window.innerWidth <= 992) {
+    sidebarlist.append(...nav.childNodes)
+  }
+
+  window.addEventListener("resize", (e) => {
+    if (window.innerWidth < 992) {
+      sidebarlist.append(...nav.childNodes)
+    } else {
+      nav.append(...sidebarlist.childNodes)
+    }
+  })
+
+  collapsebtn.addEventListener("click", () => {
+    sidebarwrapper.style.display = "block"
+  })
+
+  sidebarwrapper.addEventListener("click", (e) => {
+    if (e.target.id == "sidebarwrapper") {
+      sidebarwrapper.style.display = "none"
+    }
+  })
+
+</script>

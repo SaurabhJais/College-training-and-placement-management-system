@@ -1,0 +1,89 @@
+<div id="notifications" class="">
+    <div id="notifHeading" class="d-flex justify-content-center align-items-center">
+        <h1 class="text-center display-3" style="font-weight: 800;">Notifications</h1>
+    </div>
+    <div class="border border-1 w-75 mt-5 mx-auto" style="min-height: 500px; border-radius: 10px;">
+        <div class="notifContainer">
+            <p class="topic">SCHEDULE FOR SPECIAL CARRY OVER EXAMINATION (PG ZOOLOGY)</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic"> COLLEGE IS CLOSED TILL JULY 4, 2021 FOR SUMMER VACATION</p>
+            <p class="info">Nikal laude pahli fursat me nikal</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">ONLINE CLASS SCHEDULE OF BIOPHYSICS FOR EVEN SEMESTER</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">STUDENTS PHOTO UPDATE FORM.</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">SEC SAMPLE PAPER NOTIFICATION</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">NOTICE REGARDING MOCK ONLINE TEST FOR ALL STUDENTS</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">M. SC. PHYSICS EXAMINATION SCHEDULE</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">REMINDER FOR FULL FEE SUBMISSION</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">B. SC. SEMESTER-V CHEMISTRY PRACTICAL EXAMINATION SCHEDULE</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+        <div class="notifContainer">
+            <p class="topic">INSTRUCTIONS FOR ODD SEMESTER END EXAMINATION 2020-21</p>
+            <p class="info">Hello guys this is some basic information about bloger</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    let notifContainer = document.querySelectorAll(".notifContainer")
+    let topic = document.querySelectorAll(".topic")
+    let info = document.querySelectorAll(".info")
+
+
+    notifContainer.forEach((item) => {
+        item.insertAdjacentHTML("afterbegin", "<i id='arrow-icon' class='fas fa-sort-down'></i>")
+    })
+
+    topic.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            if (!e.srcElement.previousElementSibling.style.transform || e.srcElement.previousElementSibling.style.transform == "rotate(0deg)") {
+                e.srcElement.previousElementSibling.style.transform = "rotate(180deg) translateY(-50%)"
+            } else {
+                e.srcElement.previousElementSibling.style.transform = "rotate(0deg)"
+            }
+            if (e.srcElement.nextElementSibling.style.display == "block") {
+                e.srcElement.nextElementSibling.style.display = "none"
+            } else {
+                e.srcElement.nextElementSibling.style.display = "block"
+
+            }
+        })
+    })
+</script>

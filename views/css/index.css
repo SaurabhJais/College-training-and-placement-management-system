@@ -1,0 +1,125 @@
+body{
+    font-family: 'Open sans', sans-serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#collapsebtn:hover{
+    background-color: #6969692e;
+}
+#nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#sidebarwrapper{
+    display: none;
+}
+#sidebarlist a{
+    text-decoration: none;
+}
+
+#sidebarlist a li{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 21px;
+    cursor: pointer;
+    font-weight: 800;
+    color: black;
+}
+
+#sidebarlist li:hover{
+    background-color: rgb(219, 219, 219);
+}
+
+#hero{
+    background-image: url("/hero.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#notifHeading{
+    background-image: url("/bubbles.svg");
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.notifContainer{
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+}
+.topic{
+    cursor: pointer;
+    margin-top: 14px;
+    padding-left: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #202124;
+    padding-right: 35px;
+}
+
+#arrow-icon{
+    font-weight: 900;
+    position: absolute;
+    right: 30px;
+}
+
+.info{
+    display: none;
+    padding: 25px;
+    background-color: #e8f0fe;
+    margin-bottom: 0!important;
+}
+
+#teamImage{
+    background-image: url("/team.svg");
+    padding: 40px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#footer{
+    margin: 0;
+    background-image: url("/wave.svg");
+    background-size: cover;
+    background-color: #f4f4f48f;
+}
+
+
+#footer-links{
+    margin-top: 60px;
+}
+
+#footer-links h3{ font-weight: 800;}
+
+#footer-links a{
+    text-align: center;
+    line-height: 45px;
+    color: purple;
+}
+
+#loginform{
+    box-shadow: 7px 7px 45px 0px #00000017;
+    border-radius: 10px;
+}
+
+#loginImg{
+    height: 550px;
+  background-image: url("/login.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 500px) {
+    #signupForm{
+        width: 300px!important;
+    }
+}

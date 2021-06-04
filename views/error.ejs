@@ -1,0 +1,24 @@
+<%- include("common/metadata.ejs") %>
+    <%- include("common/header.ejs") %>
+        <div style="background-image: url('/404-error.svg'); 
+            background-repeat: no-repeat; 
+            background-size: contain; 
+            height: 450px;
+            background-position: center;
+            width: 100%;
+            ">
+
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <button onclick="window.history.back()" class="btn btn-outline-dark px-5 rounded-0 shadow-none" style="width: 300px;">
+                Go Back
+            </button>
+            <br>
+            <a href="/"><button onclick="window.history.back()" class="btn btn-outline-dark px-5 rounded-0 shadow-none py-3 mb-5" style="width: 300px;">
+                    Return to HomePage
+                </button>
+            </a>
+        </div>
+        <%- include("common/footer.ejs") %>
+            <%- include("common/metadatabottom.ejs") %>
