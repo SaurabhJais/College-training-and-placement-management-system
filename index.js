@@ -10,7 +10,7 @@ const db = require("./util/db")
  
 
 
-app.disable('x-powered-by')
+
 
 app.set("view engine", "ejs")
 
