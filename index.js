@@ -2,8 +2,8 @@ let express = require("express");
 let app = express();
 require("dotenv").config()
 let path = require("path")
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+let http = require('http').Server(app);
+let io = require('socket.io')(http);
 let router = require("./route")
 let bodyParser = require("body-parser")
 const db = require("./util/db")
@@ -31,7 +31,6 @@ app.get("/404-error", (req, res) => {
 app.get("*", (req, res) => {
     res.redirect("/404-error")
 })
-
 
 
 http.listen(process.env.PORT, () => {
