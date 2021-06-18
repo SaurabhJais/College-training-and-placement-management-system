@@ -1,0 +1,20 @@
+<%- include("common/metadata.ejs") %>
+
+    <%- include("common/header.ejs") %>
+
+        <div class="my-5 border-1 border mx-md-auto mx-3 p-4" style="height: 500px; width: fit-content;">
+            <img src="shield.svg" class="h-25 mt-4 w-auto mx-auto d-block">
+            <h3 class="text-center mt-4 fw-bold">Hi Saurabh,</h3>
+            <p class="text-center mt-4">Please enter <b>SIX digit pin</b> sent to your email
+                <br> Address jsaurabh1122@gmail.com to
+                <br> confirm your account
+            </p>
+            <form onsubmit='console.log("Hello bhai")' method="POST" action="/confirm-pin">
+                <input type="text" name="enteredPin"
+                    class="form-control w-75 d-block mx-auto mt-4 shadow-none rounded-0">
+                <button type="submit"
+                    class="btn btn-dark rounded-0 shadow-none px-5 py-2 mt-4 d-block mx-auto">Verify</button>
+            </form>
+        </div>
+
+        <%- include("common/footer.ejs") %>

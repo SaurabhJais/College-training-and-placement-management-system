@@ -1,1 +1,8 @@
-console.log("Hello bhai jan")
+function insertData(req, res){
+    
+}
+
+
+module.exports = {
+    insertData: insertData
+}
