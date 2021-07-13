@@ -1,0 +1,84 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+
+        <div class="w-100 bg-primary" style="height: 200px;">
+            <h2 class="display-3 text-white fw-bolder pt-5 px-4">Welcome
+                <%= tokenData.firstName %>
+            </h2>
+            <p class="px-4 text-white fw-bolder">User Id: <span class="fw-normal">
+                    <%= tokenData.userId %>
+                </span></p>
+        </div>
+
+
+        <div class="container-fluid p-4 ">
+            <div>
+                <h2 class="text-center my-5">Posted Jobs</h2>
+                <div class="border border-1 rounded-3 w-75 d-block mx-auto">
+                    <% if(jobs.length > 0) { %>
+
+                        <% jobs.forEach((job)=> { %>
+                            <div class="border-bottom border-1 d-flex justify-content-between">
+                                <div class="  m-2 p-3">
+                                    <div class="fw-bold text-primary d-inline-block rounded-3 p-2 my-2" style="font-size: .8rem; background-color: #92b5e957;">
+                                        <%= job.status %>
+                                    </div>
+                                    <p class="fw-bold mb-1" style="font-size: 1rem">
+                                        <%= job.jobTitle %>
+                                    </p>
+
+
+                                    <p class="fw-bold mb-1" style="font-size: .875rem;">
+                                        <%= job.companyName %>
+                                    </p>
+
+                                    <p class="text-secondary mb-1" style="font-size: .8rem;">
+                                        <%= job.jobLocation %>
+                                    </p>
+
+                                    <p class="text-secondary mb-1" style="font-size: .8rem;">
+                                        <%= job.payScale %> per annum
+                                    </p>
+
+                                    <p class="text-secondary mb-1" style="font-size: .8rem;">
+                                        Last day <%= job.lastDateToApply %>
+                                    </p>
+
+                                    <p class="text-secondary mb-3" style="font-size: 0.85rem;"><span
+                                            class="fw-bold text-dark">ID: </span>
+                                        &nbsp;&nbsp;<%= job.jobId %>
+                                    </p>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-center flex-column mx-4 ">
+                                    <a href="view-job?jobId=<%= job.jobId %>">
+                                        <button class="btn text-primary px-4 fw-bold shadow-none" style="background-color: #0d6efd3b">View</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <% }) %>
+
+                                <% } else { %>
+                                    <p class="text-center mt-3">You have not posted any job</p>
+                                    <% } %>
+                </div>
+
+
+            </div>
+
+            <br><br>
+
+
+
+            <div class="d-block mx-auto text-center fw-bolder w-25">
+                <a class="text-decoration-none" href="add-job">
+                    <button class="btn btn-primary rounded-pill py-3 px-5"
+                        style="font-weight: 900; box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);">Add
+                        Job +</button>
+                </a>
+            </div>
+
+
+
+            <%- include("../common/metadatabottom.ejs") %>

@@ -1,0 +1,15 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+        <div class="border border-1 mx-auto mt-5 col-md-4 col-10" style="height: 400px;">
+            <h3 class="m-5 fw-bolder">Enter otp </h3>
+            <p class="m-5">We sent a 6 digit otp to your email address <b><%= email %></b></p>
+            <form id="forgotPwd" method="POST" action="/verify-forgot-password" >
+                <input type="text" name="enteredPin" placeholder="Enter here"
+                    class="form-control w-75 mx-5 mt-3 shadow-none rounded-0" />
+                <button type="submit"
+                    class="mx-5 btn-primary rounded-0 shadow-none px-4 py-2 mt-5">Submit</button>
+            </form>
+        </div>
+
+        <%- include("../common/metadatabottom.ejs") %>

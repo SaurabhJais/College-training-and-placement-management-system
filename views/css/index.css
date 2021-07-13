@@ -37,6 +37,8 @@ body{
     background-color: rgb(219, 219, 219);
 }
 
+
+
 #hero{
     background-image: url("/hero.svg");
     background-repeat: no-repeat;
@@ -75,6 +77,15 @@ body{
     padding: 25px;
     background-color: #e8f0fe;
     margin-bottom: 0!important;
+}
+
+.downloadBtn{
+    border: 2px solid;
+    padding: 6px 56px;
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
 }
 
 #teamImage{

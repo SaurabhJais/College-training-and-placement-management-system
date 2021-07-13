@@ -1,0 +1,128 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+
+        <div class="bg-light pb-5">
+
+            <center>
+                <h1 class="py-5 display-1 ">Add Job</h1>
+            </center>
+
+            <div class="container bg-white rounded-3 border border-1 p-md-5 p-4">
+
+                <form method="POST" action="/hr/add-job">
+                    <div class="d-md-flex justify-content-around ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Job Title *</label>
+                            <input name="jobTitle" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Pay Scale (per annum)</label>
+                            <input name="payScale" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                    </div>
+
+
+                    <div class="d-md-flex justify-content-around  my-4 ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Company Name</label>
+                            <input name="companyName" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Bond Year (If applicable)</label>
+                            <input name="bondYears" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                    </div>
+
+
+                    <div class="d-md-flex justify-content-around  my-4 ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Company Location</label>
+                            <textarea name="companyLocation"
+                                class="form-control bg-light shadow-none rounded-0"></textarea>
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Job Location</label>
+                            <input name="jobLocation" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="d-md-flex justify-content-around  my-4 ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Training Period</label>
+                            <input name="trainingPeriod" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Company Type</label>
+                            <select name="companyType" class="form-control bg-light shadow-none rounded-0">
+                                <option value="">Select</option>
+                                <option value="mnc">MNC</option>
+                                <option value="startup">Start Up</option>
+                                <option value="govtdept">Govt. Dept.</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="d-md-flex justify-content-around  my-4 ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Last Date (to apply)</label>
+                            <input name="lastDateToApply" type="date" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Contact Email</label>
+                            <input name="contactEmail" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="d-md-flex justify-content-around  my-4 ">
+                        <div class="w-100">
+                            <label class="form-label fw-bold">Company Sector</label>
+                            <input name="companySector" class="form-control bg-light shadow-none rounded-0" />
+                        </div>
+                        <span style="width: 50px;"></span>
+                        <div class="w-100 mt-4 mt-md-auto">
+                            <label class="form-label fw-bold">Number of Employees</label>
+                            <select name="numberOfEmployees" class="form-control bg-light shadow-none rounded-0">
+                                <option value="0">Select</option>
+                                <option value="1-10">0-10</option>
+                                <option value="11-50">10-50</option>
+                                <option value="51-100">50-100</option>
+                                <option value="101-500">100-500</option>
+                                <option value="501-1000">500-1000</option>
+                                <option value="1001-10000000">More than 1000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label class="form-label fw-bold">Eligible departments</label>
+                    <textarea name="eligibleDepartments" class="w-75 bg-light form-control rounded-0 shadow-none"
+                        style="height: 100px;"></textarea>
+                    <label class="form-label fw-bold mt-5">Description</label>
+                    <textarea name="description" class="w-75 bg-light form-control rounded-0 shadow-none"
+                        style="height: 200px;"></textarea>
+
+
+                    <button type="submit" class="btn btn-primary rounded-0 shadow-none fw-bold mt-4 py-3 px-5 fs-4">Add
+                        Now +</button>
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <%- include("../common/metadatabottom.ejs") %>
+            <%- include("../common/footer.ejs") %>

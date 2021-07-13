@@ -1,0 +1,30 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+
+        <div class="row w-100" style="margin: 0;">
+            <div id="loginImg" class="col-md-6 d-none d-md-block"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div id="loginform" class="py-5 mb-3 mt-5">
+                    <h2 style="font-weight: 800;" class="mt-2 pt-4 mx-3">Admin Login</h2>
+                    <form method="POST" action="/admin-login">
+                        <div class="px-3 mt-5">
+                            <label for="email" class="form-label"><b>UserName</b></label>
+                            <input type="text" name="username" class="form-control shadow-none rounded-0" id="loginemail">
+                        </div>
+                        <br>
+                        <div class="px-3">
+                            <label for="password" class="form-label"><b>Password</b></label>
+                            <input type="password" name="password" class="form-control shadow-none rounded-0" id="loginPassword">
+                        </div>
+                        
+                        <button type="submit" class="btn mx-3 mt-4 px-5 mb-4 btn-outline-dark rounded-0">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <%- include("../common/footer.ejs") %>
+            <%- include("../common/metadatabottom.ejs") %>

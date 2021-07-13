@@ -1,53 +1,53 @@
-<%- include("common/metadata.ejs") %>
-    <%- include("common/header.ejs") %>
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
 
         <h1 class="text-center mt-4" style="font-weight: 800;">HR - Signup</h1>
         <div id="signupForm" class="border border-1 rounded-3 mx-auto my-5" style="width: 450px;">
-            <form>
+            <form method="POST" action="/signup/hr">
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">First name:</label>
-                    <input type="text" class="form-control rounded-0 shadow-none">
+                    <input name="firstName" type="text" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">Last name:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="lastName" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">Email:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="email" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
-                    <label for="name" class="form-label">Personal Address</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <label for="name" class="form-label">Mobile</label>
+                    <input name="mobile" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
-                    <label for="name" class="form-label">Company name:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <label for="name" class="form-label">Website</label>
+                    <input name="website" class="form-control rounded-0 shadow-none">
+                </div>
+                <div class="my-3 px-3">
+                    <label for="name" class="form-label">Company Name:</label>
+                    <input name="companyName" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">Company Address:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="companyAddress" class="form-control rounded-0 shadow-none">
                 </div>
 
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">City:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="city" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">State:</label>
-                    <input class="form-control rounded-0 shadow-none">
-                </div>
-                <div class="my-3 px-3">
-                    <label for="name" class="form-label">Pin code:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="state" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">Enter Password:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="password" type="password" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="my-3 px-3">
                     <label for="name" class="form-label">Confirm password:</label>
-                    <input class="form-control rounded-0 shadow-none">
+                    <input name="confirmPassword" type="password" class="form-control rounded-0 shadow-none">
                 </div>
                 <div class="m-3">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -60,5 +60,5 @@
         </div>
 
 
-        <%- include("common/footer.ejs") %>
-            <%- include("common/metadatabottom.ejs") %>
+        <%- include("../common/footer.ejs") %>
+            <%- include("../common/metadatabottom.ejs") %>

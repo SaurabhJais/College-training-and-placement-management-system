@@ -1,0 +1,30 @@
+<%- include("../common/header.ejs") %>
+    <%- include("../common/metadata.ejs") %>
+
+        <center><h1 class="display-5 my-5 ">Release Notification</h1></center>
+        <div class="w-50 d-block mx-auto border border-1 m-5 p-5">
+            <form method="POST" action="release-notification" enctype="multipart/form-data">
+                <div class="p-4">
+                    <label class="form-label">Title *</label>
+                    <input name="title" class="form-control shadow-none rounded-0" />
+                </div>
+                <div class="p-4 ">
+                    <label class="form-label">Description *</label>
+                    <textarea name="description" maxlength="450" class="form-control shadow-none rounded-0" style="height: 150px;"></textarea>
+                </div>
+
+                <div class="p-4">
+                    <label class="form-label">Attachment</label>
+                    <p class="form-text">The file format should be only .png, .jpg, .pdf or .docx</p>
+                    <input name="attachment" class="form-control shadow-none rounded-0" type="file" />
+                </div>
+
+                <div class="p-4">
+                    <input type="submit" class="btn-primary form-control rounded-0 shadow-none" />
+                </div>
+            </form>
+        </div>
+
+
+
+        <%- include("../common/metadataBottom.ejs") %>

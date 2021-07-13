@@ -1,5 +1,5 @@
-<%- include("common/metadata.ejs") %>
-    <%- include("common/header.ejs") %>
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
 
 
         <div class="row w-100" style="margin: 0;">
@@ -7,18 +7,17 @@
             <div class="col-md-1"></div>
             <div class="col-md-5">
                 <div id="loginform" class="py-5 mb-3">
-                    <h2 style="font-weight: 800;" class="mt-2 pt-4 mx-3">Student Login</h2>
-                    <p class="px-3 mt-3">Does not have an account yet ?<a href="/student-signup"> Sign up from here</a>
-                    </p>
-                    <form>
+                    <h2 style="font-weight: 800;" class="mt-2 pt-4 mx-3">HR Login</h2>
+                    <p class="px-3 mt-3">Does not have an account yet ?<a href="/hr-signup"> Sign up from here</a></p>
+                    <form method="POST" action="/login/hr">
                         <div class="px-3 mt-5">
                             <label for="email" class="form-label"><b>Email</b></label>
-                            <input type="email" class="form-control shadow-none rounded-0" id="loginemail">
+                            <input type="email" name="email" class="form-control shadow-none rounded-0" id="loginemail">
                         </div>
                         <br>
                         <div class="px-3">
                             <label for="password" class="form-label"><b>Password</b></label>
-                            <input type="password" class="form-control shadow-none rounded-0" id="loginPassword">
+                            <input type="password" name="password" class="form-control shadow-none rounded-0" id="loginPassword">
                         </div>
                         <div class="my-3 mx-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -27,9 +26,11 @@
                         </div>
                         <button type="submit" class="btn mx-3 mt-3 px-5 mb-4 btn-outline-dark rounded-0">Submit</button>
                     </form>
+
+                    <a href="/forgot-password?u=hr" class="mx-3">Forgot Password</a>
                 </div>
             </div>
         </div>
 
-        <%- include("common/footer.ejs") %>
-            <%- include("common/metadatabottom.ejs") %> 
+        <%- include("../common/footer.ejs") %>
+            <%- include("../common/metadatabottom.ejs") %>

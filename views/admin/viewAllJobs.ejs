@@ -1,0 +1,69 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+        <% if(jobs.length) { %>
+            <h1 class="text-center mt-5">All Jobs</h1>
+
+            <% jobs.forEach((job)=> { %>
+                <div class="border border-1 rounded-3 w-50 d-block my-5 mx-auto ">
+
+                    <div class="d-flex justify-content-between px-4 py-2">
+                        <div class="">
+                            
+
+                            <p class="fw-bold mb-1" style="font-size: 1rem">
+                                <%= job.jobTitle %>
+                            </p>
+
+
+                            <p class="fw-bold mb-1" style="font-size: .875rem;">
+                                <%= job.companyName %>
+                            </p>
+
+                            <p class="text-secondary mb-1" style="font-size: .8rem;">
+                                <span class="text-dark fw-bold">Last day</span>
+                                <%= job.lastDateToApply %>
+                            </p>
+
+                            <p class="text-secondary" style="font-size: 0.85rem;"><span class="fw-bold text-dark">ID:
+                                </span>
+                                &nbsp;&nbsp;<%= job.jobId %>
+                            </p>
+
+                        </div>
+                        <div class="d-flex justify-content-evenly  align-items-center flex-column ">
+                            <div class="fw-bold text-primary d-inline-block rounded-3 px-4 py-1 my-1"
+                                style="font-size: .8rem; background-color: #92b5e957;">
+                                <%= job.status %>
+                                <img src="https://fonts.gstatic.com/s/i/materialiconsoutlined/check_circle_outline/v11/24px.svg"
+                                    style="height: 20px; padding-left: 10px;"  />
+                            </div>
+
+                            <a href="view-job-as-admin?jobId=<%= job.jobId %>">
+                                <button class="btn px-5 fw-bold shadow-none"
+                                    style="background-color: #0d6efd3b">View</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <% }) } else { %>
+                    <div class="d-flex justify-content-center align-items-center"
+                        style="height: 88vh; background: linear-gradient(to top left, #0dcaf0 50%, #f8f9fa 50%);">
+
+                        <div style="width: 300px; height: 400px; box-shadow: 0px 33px 72px 24px #7e7c7c87;"
+                            class="border border-1 bg-white rounded-3">
+                            <img class="d-flex mx-auto mt-4"
+                                src="https://img.icons8.com/doodle/150/000000/empty-box.png" />
+                            <p class="text-center fw-bold mt-4 fs-4 ">
+                                There is no<br> pending jobs
+                            </p>
+                            <div class="w-25 border border-1 d-block mx-auto"></div>
+                            <p class="text-center mt-4 text-secondary" style="font-size: 15px;">
+                                When any job will be added by any HR that will be reflected here :)
+                            </p>
+                        </div>
+                    </div>
+                    <% } %>
+
+                        <%- include("../common/metadataBottom.ejs") %>

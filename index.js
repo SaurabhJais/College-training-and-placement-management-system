@@ -3,10 +3,8 @@ let app = express();
 require("dotenv").config();
 let path = require("path");
 let http = require('http').Server(app);
-let router = require("./routes/route");
-const db = require("./util/db");
+let routes = require("./routes/routes")
 const cookieParser = require("cookie-parser");
-const setGlobals = require("./util/setGlobals");
 
 
 
@@ -18,11 +16,21 @@ app.use(express.static(path.join(__dirname + "/views/")));
 app.use(cookieParser());
 
 
-app.use(setGlobals)
+
+// Set isLoggedIn variable to all the ejs templates
+app.use((req, res, next) => {
+    if (req.cookies['token']) {
+        res.locals.isLoggedIn = true;
+    } else {
+        res.locals.isLoggedIn = false
+    }
+    next();
+})
 
 
 
-app.use("/", router);
+app.use("/", routes)
+
 
 app.get("/404-error", (req, res) => {
     res.render("error.ejs");
@@ -30,6 +38,7 @@ app.get("/404-error", (req, res) => {
 
 
 app.get("*", (req, res) => {
+
     res.redirect("/404-error");
 })
 

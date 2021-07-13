@@ -1,0 +1,20 @@
+<%- include("../common/metadata.ejs") %>
+    <%- include("../common/header.ejs") %>
+
+
+        <h1 class="text-center mt-5">Job Details of</h1>
+        <h1 class="text-center my-5"><%= details.jobTitle %></h1>
+
+        <div class="w-50 d-block mx-auto">
+            <% for(let x in details) { %>
+                <div class="border d-flex p-3">
+                    <div class="fw-bold  w-100"><%= x %> </div>
+                    <div class=" w-100"><%= details[x] %></div>
+                </div>
+                <% } %>
+        </div>
+
+        <h1 class="p-4 mt-5 text-center" >Applied Students</h1>
+            
+
+        <%- include("../common/metadatabottom.ejs") %>
